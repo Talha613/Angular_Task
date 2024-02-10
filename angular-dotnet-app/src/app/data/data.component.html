@@ -1,0 +1,16 @@
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.id }}</td>
+        <td><input [(ngModel)]="item.name" (ngModelChange)="onItemNameChange(item, $event)" /></td>
+        <span>Changed Name: {{ item.name }}</span>
+      </tr>
+    </tbody>
+  </table>
+  
